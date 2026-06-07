@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import "./src/styles/konsenso.css";
+import { useState, useEffect } from "react";
+import "./styles/konsenso.css";
 
 // Components
-import { Header } from "./src/components/Header";
-import { Sidebar } from "./src/components/Sidebar";
-import { BottomNav } from "./src/components/BottomNav";
+import { Header } from "./components/Header";
+import { Sidebar } from "./components/Sidebar";
+import { BottomNav } from "./components/BottomNav";
 
 // Views
-import { Dashboard } from "./src/views/Dashboard";
-import { Validacion } from "./src/views/Validacion";
-import { Voceria } from "./src/views/Voceria";
+import { Dashboard } from "./views/Dashboard";
+import { Validacion } from "./views/Validacion";
+import { Voceria } from "./views/Voceria";
 
 // Constants & Types
-import { ValidacionRegistro, Territorio, Recurso } from "./src/constants/data";
+import type { ValidacionRegistro, Territorio, Recurso } from "./constants/data";
 
 export default function App() {
   const [screen, setScreen]           = useState<string>("dashboard");
@@ -55,7 +55,7 @@ export default function App() {
       id: `V${Date.now()}`, 
       zona: zona.nombre, 
       recurso: recurso.tipo, 
-      estado: tipo as any, 
+      estado: tipo as ValidacionRegistro["estado"], 
       sync: false 
     };
     setHistorial(p => [v, ...p]);

@@ -1,7 +1,6 @@
-import React from "react";
 import { CICLO_ACTIVO, HISTORIAL_CICLOS } from "../constants/data";
 
-export const Voceria: React.FC = () => {
+export const Voceria = () => {
   return (
     <div className="fade-in">
       <div className="section-label">CICLO ACTIVO</div>

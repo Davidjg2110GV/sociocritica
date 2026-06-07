@@ -1,5 +1,3 @@
-import React from "react";
-
 interface NavItem {
   id: string;
   icon: string;
@@ -12,7 +10,7 @@ interface SidebarProps {
   navItems: NavItem[];
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({ screen, goNav, navItems }) => {
+export const Sidebar = ({ screen, goNav, navItems }: SidebarProps) => {
   return (
     <aside className="sidebar">
       <nav className="sidebar-nav">

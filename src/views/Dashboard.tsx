@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { RECURSOS, ZONAS_MAPA, SEM } from "../constants/data";
 
-export const Dashboard: React.FC = () => {
+export const Dashboard = () => {
   const [detalle, setDetalle] = useState<string | null>(null);
 
   return (

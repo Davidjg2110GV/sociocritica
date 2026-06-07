@@ -1,12 +1,10 @@
-import React from "react";
-
 interface HeaderProps {
   pendSync: number;
   theme: string;
   toggleTheme: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ pendSync, theme, toggleTheme }) => {
+export const Header = ({ pendSync, theme, toggleTheme }: HeaderProps) => {
   return (
     <header className="header">
       <div className="header-logo">

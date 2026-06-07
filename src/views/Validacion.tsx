@@ -1,13 +1,10 @@
-import React from "react";
 import { 
-  Territorio, 
-  Recurso, 
-  ValidacionRegistro, 
   TERRITORIOS, 
   RECURSOS, 
   SEM, 
   getEstadoColor 
 } from "../constants/data";
+import type { Territorio, Recurso, ValidacionRegistro } from "../constants/data";
 
 interface ValidacionProps {
   step: number;
@@ -22,7 +19,7 @@ interface ValidacionProps {
   historial: ValidacionRegistro[];
 }
 
-export const Validacion: React.FC<ValidacionProps> = ({
+export const Validacion = ({
   step,
   setStep,
   zona,
@@ -33,7 +30,7 @@ export const Validacion: React.FC<ValidacionProps> = ({
   resultado,
   reset,
   historial
-}) => {
+}: ValidacionProps) => {
   return (
     <div className="fade-in">
       {/* Progress bar */}

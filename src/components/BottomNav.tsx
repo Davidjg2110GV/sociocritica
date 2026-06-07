@@ -1,5 +1,3 @@
-import React from "react";
-
 interface NavItem {
   id: string;
   icon: string;
@@ -12,7 +10,7 @@ interface BottomNavProps {
   navItems: NavItem[];
 }
 
-export const BottomNav: React.FC<BottomNavProps> = ({ screen, goNav, navItems }) => {
+export const BottomNav = ({ screen, goNav, navItems }: BottomNavProps) => {
   return (
     <nav className="bottom-nav">
       {navItems.map(t => (
